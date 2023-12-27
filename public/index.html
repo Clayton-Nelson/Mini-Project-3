@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Books</title>
+    <script src="./script.js"></script>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <template id="card-template">
+      <div class="card">
+        <h2 class="card-title"></h2>
+        <h3 class="card-authors"></h3>
+        <p class="card-id"></p>
+      </div>
+    </template>
+    <div class="container">
+      <div class="head">
+        <div class="top">
+          <div class="input-section">
+            <label for="bookId">Book ID:</label>
+            <input
+              type="number"
+              id="bookId"
+              min="1"
+              max="72424"
+              placeholder="Max 72424"
+            />
+            <button type="button" onclick="getBookById()">Get Book</button>
+          </div>
+          <div class="delete-section">
+            <label for="deleteBookId">Delete by ID:</label>
+            <input
+              type="number"
+              id="deleteBookId"
+              min="1"
+              max="72424"
+              placeholder="Use ID in list"
+            />
+            <button type="button" onclick="deleteBookById()">
+              Delete Book
+            </button>
+          </div>
+        </div>
+        <div class="bottom">
+          <button type="button" onclick="getRandomBook()">
+            Get Random Book
+          </button>
+          <button type="button" onclick="deleteRandomBook()">
+            Delete Random Book
+          </button>
+        </div>
+      </div>
+      <div class="results-container">
+        <div class="results" id="cards"></div>
+      </div>
+    </div>
+  </body>
+</html>
